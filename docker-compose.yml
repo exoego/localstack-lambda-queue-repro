@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  localstack:
+    image: localstack/localstack:3.1
+    environment:
+      - EAGER_SERVICE_LOADING=1
+      - SERVICES=lambda
+    ports:
+      - "4566:4566"
+    volumes:
+      - ./scripts/localstack:/etc/localstack/init/ready.d
+      - /var/run/docker.sock:/var/run/docker.sock
