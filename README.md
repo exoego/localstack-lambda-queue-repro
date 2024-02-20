@@ -12,8 +12,10 @@ docker-compose up
 npm ci
 
 npm run test
-npm run test
+npm run test 
 ```
+Note that the second run is intended, to re-create the Lambda function during the test.
+
 
 3. Go to the tab where the docker is running and you will see the following error in Docker logs:
     
